@@ -1,0 +1,6 @@
+.toggle__button {
+  border-radius: 50%;
+  width: rem(16);
+  height: rem(16);
+  background-color: var(--lightToggle);
+}/*# sourceMappingURL=toggle.css.map */

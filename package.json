@@ -1,0 +1,36 @@
+{
+  "name": "social-media-dashboard-with-theme-switcher",
+  "version": "1.0.0",
+  "description": "my challenge is to build out this landing page and get it looking as close to the design as possible.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/df4637816/Social-media-dashboard-with-theme-switcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/df4637816/Social-media-dashboard-with-theme-switcher/issues"
+  },
+  "homepage": "https://github.com/df4637816/Social-media-dashboard-with-theme-switcher#readme",
+  "dependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.14",
+    "cssnext": "^1.8.5",
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.19",
+    "precss": "^4.0.0"
+  }
+}

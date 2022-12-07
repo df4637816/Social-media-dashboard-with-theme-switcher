@@ -1,3 +1,28 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-Inter);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
 :root {
   --LimeGreen: hsl(163, 72%, 41%);
   --BrighRed: hsl(356, 69%, 56%);
