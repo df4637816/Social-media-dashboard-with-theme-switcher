@@ -4,7 +4,8 @@
   "description": "my challenge is to build out this landing page and get it looking as close to the design as possible.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,15 @@
     "cssnano": "^5.1.14",
     "cssnext": "^1.8.5",
     "dart-sass": "^1.25.0",
-    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "postcss": "^8.4.19",
-    "precss": "^4.0.0"
+    "precss": "^4.0.0",
+    "sass": "^1.56.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

@@ -1,13 +1,13 @@
  const {src,dest,watch,series} = require('gulp');
- const sass = require('gulp-sass');
+ const sass = require('gulp-sass')(require('sass'));
  const postcss = require('gulp-postcss');
  const autoprefixer = require('autoprefixer');
  const cssnano = require('cssnano');
  const babel = require('gulp-babel');
  const terser = require('gulp-terser');
  const cssnext = require('cssnext');
-const { Server } = require('http');
-const browsersync = require('browser-sync').create();
+
+
 //sass task
  function scssTask(){
     var processors = [autoprefixer()
@@ -26,31 +26,15 @@ const browsersync = require('browser-sync').create();
       .pipe(dest('dist',{sourcemaps:'.'}))
  }
  
- function browserSyncServer(cb){
-    browsersync.init({
-        server:{
-            baseDir:'.',
-        }},{
-            notify:{
-                styles:{
-                    top:'auto',
-                    bottom:'0',
-                }
-            }
-        }
-    )
- }
-
- function browserSyncReload(cb){
-     browsersync.reload();
-     cb();
- }
-
+ 
  //watch Task
 
  function watchTask(){
-     watch('*.html',browserSyncReload);
+     watch('*.html');
      watch(
         ['app/scss/**/*.scss','app/**/*.js']
      )
  }
+
+ //Default Gulp Task
+ exports.default = series(scssTask,jsTask,watchTask);
