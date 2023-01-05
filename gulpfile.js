@@ -6,6 +6,9 @@
  const babel = require('gulp-babel');
  const terser = require('gulp-terser');
  const cssnext = require('cssnext');
+ const browserSync = require('browser-sync');
+ const bs = browserSync.create();
+
 
 
 //sass task
@@ -18,23 +21,39 @@
      .pipe(dest('dist',{sourcemaps:'.'}));
  }
 
- //js yask
+ //js Task
  function jsTask(){
       return src('app/js/app.js',{sourcemaps:true})
       .pipe(babel({presets:['@babel/preset-env']}))//編譯js
       .pipe(terser())//壓縮代碼
       .pipe(dest('dist',{sourcemaps:'.'}))
  }
+
+ function browsersyncServe(cb){
+    bs.init({
+      server: {
+        baseDir: '.'
+      }    
+    });
+    cb();
+  }
+ function browsersyncReload(cb){
+    bs.reload();
+    cb();
+  }
  
  
  //watch Task
 
  function watchTask(){
-     watch('*.html');
+     watch('*.html',browsersyncReload);
      watch(
-        ['app/scss/**/*.scss','app/**/*.js']
-     )
+        ['app/scss/**/*.scss','app/**/*.js'],series(scssTask, jsTask, 
+            browsersyncReload))
+     
  }
 
  //Default Gulp Task
- exports.default = series(scssTask,jsTask,watchTask);
+ exports.default = series(scssTask,jsTask,watchTask,browsersyncServe);
+
+ 
