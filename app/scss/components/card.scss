@@ -2,4 +2,49 @@
 
 .card{
     padding:rem(20) ;
+    background:var(--DarkDesaturatedBlue) ;
+    color: var(--DesaturatedBlue);
+    width: rem(255);
+    padding: rem(25);
+    text-align: center;
+    &__icon{
+
+        &--facebook{
+
+        }
+        &--twitter{
+
+        }
+        &--youtube{
+
+        }
+        &--instagram{
+            
+        }
+        
+    }
+    &__username{
+
+    }
+    &__count{
+        &--big{
+
+        }
+        &--small{
+
+        }
+    }
+    &__label{
+
+    }
+
+    &__change{
+        &--up{
+
+        }
+        &--down{
+            
+        }
+    }
+
 }

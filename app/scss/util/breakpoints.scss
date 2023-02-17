@@ -1,21 +1,21 @@
 
 
-// 640px,950px,1400px
+// 640px,1150px,1400px
 
 $breakpoints-up:(
      'md':'40em',
-     'lg':'59.375em',
+     'lg':'71.875em',
      'xg':'87.5em',
 );
 
-//639px ,949px 1399px
+//639px ,1149px 1399px
 
 $breakpoints-down:(
     'sm':'39.9375em',
-    'md':'59.3125em',
+    'md':'71.8125em',
     'lg':'87.4375em',
 );
-
+ 
 
 
 @mixin breakpoint-min($size) {

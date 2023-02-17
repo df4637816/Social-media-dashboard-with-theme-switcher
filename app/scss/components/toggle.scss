@@ -1,22 +1,35 @@
 @use '../util/' as *;
 
 .toggle{
+    
     position: relative;
     display: block;
     width: rem(40);
     height: rem(20);
     border-radius: rem(20);
-    background-color:var(--lightToggle) ;
+    background:var(--DarkToggle) ;
+    cursor: pointer;
+                
     &__button{
         border-radius: 50%;
         position: absolute;
         display: block;
         width: rem(16);
         height: rem(16);
-        background: var(--DarkToggle);
+        background: var(--DarkDesaturatedBlue);
         top: 50%;
         bottom: 50%;
         left: 5%;
         transform:translateY(-50%) ;
+        transition: .5s;
+    }
+    
+}
+
+.toggle.active{
+    background: var(--lightToggle);
+    .toggle__button{
+       left: 55%;
+       background: var(--light-bg);
     }
 }

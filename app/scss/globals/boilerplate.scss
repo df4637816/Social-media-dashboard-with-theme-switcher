@@ -1,3 +1,5 @@
+@use '../util/' as * ;
+
 html{
     font-size: 100%;
     box-sizing: border-box;
@@ -11,4 +13,23 @@ body{
     font-family: var(--font-Inter);
     margin: 0;
     padding: 0;
+    background: var(--VeryDarkBlue);
+    color: var(--DesaturatedBlue);
+    transition: .5s;
+}
+body.active{
+    background: var(--light-bg);
+    transition: .5s;
+    h1{
+        color:var(--Text-DarkBlue) ;
+    }
+    span.header__subtitle{
+        color: var(--Text-GrayishBlue);
+    }
+}
+
+span{
+    font-family:var(--font-Inter);
+    font-size: rem(14);
+    font-weight: 700;
 }

@@ -1,19 +1,18 @@
 @use '../util/' as *;
 .header{
-    @include breakpoint-min(md)
+    @include breakpoint-min(lg)
     {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: rem(15);
+        margin-top: rem(31);
     }
-    &__title{
-       
-       h1{
-         margin-bottom: 0;
+    
+    &__toggle{
+       display: flex;
+       span{
+           padding: 0 rem(10);
        }
     }
-    &__toggle{
-
-    }
+   
 }

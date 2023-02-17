@@ -1,7 +1,18 @@
+@use '../util/' as *;
+
+
 h1,h2,h3{
     margin-top: 0;
+    line-height: 1.1;
 }
-
+h1{
+    font-size: rem(24);
+    color:var(--Text-White) ;
+    margin-bottom: rem(5);
+    @include breakpoint-min(lg){
+        font-size: rem(27);
+    }
+}
 a,
 a:active,
 a:visited{
