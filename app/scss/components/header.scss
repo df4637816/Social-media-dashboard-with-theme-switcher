@@ -1,18 +1,41 @@
 @use '../util/' as *;
 .header{
-    @include breakpoint-min(lg)
+    display: flex;
+    margin-top: rem(31);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint-max(lg)
     {
-        display: flex;
-        justify-content: space-between;
+       
         align-items: center;
-        margin-top: rem(31);
+        
+        
+    }
+    &__title{
+
+    }
+
+    &__subtitle{
+       font-size: rem(14);
+       font-weight: 700;
+       color: var(--DesaturatedBlue);
     }
     
     &__toggle{
        display: flex;
+       margin-top: rem(22);
        span{
            padding: 0 rem(10);
-       }
+           display: block;
+       
+            }
+        @include breakpoint-max(sm){
+             display: flex;
+             width: 100%;
+             justify-content: space-between;
+            padding: rem(12) 0;
+            border-top: 1px solid var(--DesaturatedBlue);
+        }    
     }
    
 }

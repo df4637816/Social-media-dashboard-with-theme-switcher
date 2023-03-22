@@ -7,6 +7,12 @@
     width: rem(255);
     padding: rem(25);
     text-align: center;
+    &__platform{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
     &__icon{
 
         &--facebook{
@@ -24,17 +30,26 @@
         
     }
     &__username{
-
+        font-size: rem(12);
+        font-weight: 700;
+        
     }
     &__count{
+        color: var(--Text-White);
+        font-weight: 700;
         &--big{
-
+            font-size: rem(56);
         }
         &--small{
 
         }
     }
     &__label{
+        font-size: rem(12);
+        font-weight: 400;
+        color: var(--DesaturatedBlue);
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
 
     }
 
